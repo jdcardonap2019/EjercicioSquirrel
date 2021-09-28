@@ -81,6 +81,7 @@ fetch(url).then(res=>res.json()).then(res=>{
         let event = eventos2[i]
         event.Correlation = ((event.TP*event.TN) - (event.FP*event.FN))/(((event.TP+event.FP)*(event.TP+event.FN)*(event.TN+event.FP)*(event.TN+event.FN))**(1/2))
     }
+    //Ordenamiento
     for (let i = 0; i<eventos2.length;i++)
     {
         let event = eventos2[i]
@@ -110,7 +111,4 @@ fetch(url).then(res=>res.json()).then(res=>{
        const ne = document.getElementById("fila2")
         ne.appendChild(tr)
     }
-    //Ordenamiento
-
-
 })
